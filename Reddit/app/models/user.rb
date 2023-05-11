@@ -25,7 +25,7 @@ class User < ApplicationRecord
 
     #SPIRE
 
-    def self.find_by_credentials(username, password)
+    def self.find_by_credentials(username, password) #used for sign in page
         @user = User.find_by(username: username)
         if @user && @user.is_password?(password)
             @user
